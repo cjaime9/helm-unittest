@@ -103,7 +103,7 @@ installFile() {
   HELM_UNIT="/home/jenkins/.helm/plugins"
   echo "Before BEFORE Print out contents of ${HELM_UNIT}"
   echo $(ls -la $HELM_UNIT)
-  #rm -r "$HELM_UNIT"
+  rm -r "/home/jenkins/.helm/plugins/helm-unittest"
   echo "CREATE DIRECTORY NEW ONE $HELM_UNIT"
   mkdir -p "$HELM_UNIT"
   echo "Before Print out contents of ${HELM_UNIT}"
