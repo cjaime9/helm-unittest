@@ -101,7 +101,7 @@ installFile() {
   tar xf "$PLUGIN_TMP_FILE" -C "$HELM_TMP"
   HELM_TMP_BIN="$HELM_TMP/untt"
   HELM_UNIT="$HELM_PLUGIN_PATH/helm-unittest"
-  echo "CREATE DIRECTORY $HELM_UNIT"
+  echo "CREATE DIRECTORY NEW ONE $HELM_UNIT"
   mkdir -p "HELM_UNIT"
   echo "Preparing to install into ${HELM_PLUGIN_PATH}"
   echo "GOING TO DO A COPY FOR ${HELM_TMP_BIN} to ${HELM_PLUGIN_PATH}"
