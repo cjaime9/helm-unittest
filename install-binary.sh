@@ -109,6 +109,8 @@ installFile() {
   cp "$HELM_TMP_BIN" "$HELM_UNIT"
   echo "Print out contents of ${HELM_UNIT}"
   echo $(ls $HELM_UNIT)
+  echo "Print out contents of ${HELM_TMP}"
+  echo $(ls $HELM_TMP)
   echo "DONE WIHT THE COPY"
 }
 
