@@ -101,6 +101,8 @@ installFile() {
   tar xf "$PLUGIN_TMP_FILE" -C "$HELM_TMP"
   HELM_TMP_BIN="$HELM_TMP/untt"
   HELM_UNIT="/home/jenkins/.helm/plugins/helm-unittest"
+  echo "Before BEFORE Print out contents of ${HELM_UNIT}"
+  echo $(ls -la $HELM_UNIT)
   echo "CREATE DIRECTORY NEW ONE $HELM_UNIT"
   mkdir -p "HELM_UNIT"
   echo "Before Print out contents of ${HELM_UNIT}"
