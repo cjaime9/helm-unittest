@@ -108,7 +108,7 @@ installFile() {
   # Use * to also copy the file withe the exe suffix on Windows
   cp "$HELM_TMP_BIN" "$HELM_UNIT"
   echo "Print out contents of ${HELM_UNIT}"
-  echo ${ls /home/jenkins/.helm/helm-unittest}
+  echo ${ls /home/jenkins/.helm}
   echo "DONE WIHT THE COPY"
 }
 
