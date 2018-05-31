@@ -124,7 +124,7 @@ testVersion() {
 }
 
 # Execution
-
+echo "running cjaime branch file"
 #Stop execution on any error
 trap "fail_trap" EXIT
 set -e
