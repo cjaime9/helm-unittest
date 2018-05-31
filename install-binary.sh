@@ -100,8 +100,8 @@ installFile() {
   mkdir -p "$HELM_TMP"
   tar xf "$PLUGIN_TMP_FILE" -C "$HELM_TMP"
   HELM_TMP_BIN="$HELM_TMP/untt"
-  echo "CREATE DIRECTORY ${HELM_PLUGIN_PATH}/helm-unittest"
-  mkdir -p "${HELM_PLUGIN_PATH}/helm-unittest"
+  echo "CREATE DIRECTORY $HELM_PLUGIN_PATH/helm-unittest"
+  mkdir -p "HELM_PLUGIN_PATH/helm-unittest"
   echo "Preparing to install into ${HELM_PLUGIN_PATH}"
   echo "GOING TO DO A COPY FOR ${HELM_TMP_BIN} to ${HELM_PLUGIN_PATH}"
   # Use * to also copy the file withe the exe suffix on Windows
