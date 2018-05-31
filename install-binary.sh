@@ -106,11 +106,11 @@ installFile() {
   echo "Preparing to install into ${HELM_UNIT}"
   echo "GOING TO DO A COPY FOR ${HELM_TMP} to ${HELM_UNIT}"
   # Use * to also copy the file withe the exe suffix on Windows
-  cp -rf "$HELM_TMP_BIN" "$HELM_UNIT"
+  cp -rf "$HELM_TMP" "$HELM_UNIT"
   echo "Print out contents of ${HELM_UNIT}"
-  echo $(ls -l $HELM_UNIT)
+  echo $(ls -la $HELM_UNIT)
   echo "Print out contents of ${HELM_TMP}"
-  echo $(ls -l $HELM_TMP)
+  echo $(ls -la $HELM_TMP)
   echo "DONE WIHT THE COPY"
 }
 
