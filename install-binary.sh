@@ -101,8 +101,10 @@ installFile() {
   tar xf "$PLUGIN_TMP_FILE" -C "$HELM_TMP"
   HELM_TMP_BIN="$HELM_TMP/untt"
   echo "Preparing to install into ${HELM_PLUGIN_PATH}"
+  echo "GOING TO DO A COPY"
   # Use * to also copy the file withe the exe suffix on Windows
   cp "$HELM_TMP_BIN"* "$HELM_PLUGIN_PATH"
+  ECHO "DONE WIHT THE COPY"
 }
 
 # fail_trap is executed if an error occurs.
