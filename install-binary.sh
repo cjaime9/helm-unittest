@@ -106,7 +106,7 @@ installFile() {
   echo "Preparing to install into ${HELM_UNIT}"
   echo "GOING TO DO A COPY FOR ${HELM_TMP_BIN} to ${HELM_UNIT}"
   # Use * to also copy the file withe the exe suffix on Windows
-  cp "$HELM_TMP_BIN" "$HELM_PLUGIN_PATH"
+  cp "$HELM_TMP_BIN" "$HELM_UNIT"
   echo "DONE WIHT THE COPY"
 }
 
