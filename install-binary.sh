@@ -103,11 +103,13 @@ installFile() {
   HELM_UNIT="/home/jenkins/.helm/plugins/helm-unittest"
   echo "CREATE DIRECTORY NEW ONE $HELM_UNIT"
   mkdir -p "HELM_UNIT"
+  echo "Before Print out contents of ${HELM_UNIT}"
+  echo $(ls -la $HELM_UNIT)
   echo "Preparing to install into ${HELM_UNIT}"
   echo "GOING TO DO A COPY FOR ${HELM_TMP} to ${HELM_UNIT}"
   # Use * to also copy the file withe the exe suffix on Windows
-  mv "$HELM_TMP" "$HELM_UNIT"
-  echo "Print out contents of ${HELM_UNIT}"
+  mv "$HELM_TMP_BIN" "$HELM_UNIT"
+  echo "After Print out contents of ${HELM_UNIT}"
   echo $(ls -la $HELM_UNIT)
   echo "Print out contents of ${HELM_TMP}"
   echo $(ls -la $HELM_TMP)
