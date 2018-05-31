@@ -113,9 +113,9 @@ installFile() {
   # Use * to also copy the file withe the exe suffix on Windows
   cp -rf "$HELM_TMP" "$HELM_UNIT"
   echo "After Print out contents of ${HELM_UNIT}"
-  echo $(ls -la $HELM_UNIT)
+  echo $(ls  /home/jenkins/.helm/plugins/helm-unittest)
   echo "Print out contents of ${HELM_TMP}"
-  echo $(ls -la $HELM_TMP)
+  echo $(ls  $HELM_TMP)
   echo "DONE WIHT THE COPY"
 }
 
