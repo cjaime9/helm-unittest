@@ -93,7 +93,10 @@ downloadFile() {
 # installFile verifies the SHA256 for the file, then unpacks and
 # installs it.
 installFile() {
+  echo "Running install file"
   HELM_TMP="/tmp/$PROJECT_NAME"
+  echo "HELM_TMP IS ${HELM_TMP}"
+  echo "HELM_PLUGIN_PATH is ${HELM_PLUGIN_PATH}"
   mkdir -p "$HELM_TMP"
   tar xf "$PLUGIN_TMP_FILE" -C "$HELM_TMP"
   HELM_TMP_BIN="$HELM_TMP/untt"
