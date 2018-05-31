@@ -94,7 +94,7 @@ downloadFile() {
 # installs it.
 installFile() {
   echo "Running install file"
-  HELM_TMP="/tmp/$PROJECT_NAME"
+  HELM_TMP="/tmp/$PROJECT_NAME/"
   echo "HELM_TMP IS ${HELM_TMP}"
   echo "HELM_PLUGIN_PATH is ${HELM_PLUGIN_PATH}"
   mkdir -p "$HELM_TMP"
