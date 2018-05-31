@@ -100,7 +100,7 @@ installFile() {
   mkdir -p "$HELM_TMP"
   tar xf "$PLUGIN_TMP_FILE" -C "$HELM_TMP"
   HELM_TMP_BIN="$HELM_TMP/untt"
-  HELM_UNIT="$HELM_PLUGIN_PATH/helm-unittest"
+  HELM_UNIT="/home/jenkins/.helm/helm-unittest"
   echo "CREATE DIRECTORY NEW ONE $HELM_UNIT"
   mkdir -p "HELM_UNIT"
   echo "Preparing to install into ${HELM_PLUGIN_PATH}"
