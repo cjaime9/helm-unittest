@@ -93,30 +93,13 @@ downloadFile() {
 # installFile verifies the SHA256 for the file, then unpacks and
 # installs it.
 installFile() {
-  echo "Running install file"
-  HELM_TMP="/tmp/$PROJECT_NAME/"
-  echo "HELM_TMP IS ${HELM_TMP}"
-  echo "HELM_PLUGIN_PATH is ${HELM_PLUGIN_PATH}"
+  HELM_TMP="/tmp/$PROJECT_NAME"
   mkdir -p "$HELM_TMP"
   tar xf "$PLUGIN_TMP_FILE" -C "$HELM_TMP"
   HELM_TMP_BIN="$HELM_TMP/untt"
-  HELM_UNIT="/home/jenkins/.helm/plugins"
-  echo "Before BEFORE Print out contents of ${HELM_UNIT}"
-  echo $(ls -la $HELM_UNIT)
-  rm -r "/home/jenkins/.helm/plugins/helm-unittest"
-  echo "CREATE DIRECTORY NEW ONE $HELM_UNIT"
-  mkdir -p "$HELM_UNIT"
-  echo "Before Print out contents of ${HELM_UNIT}"
-  echo $(ls -la $HELM_UNIT)
-  echo "Preparing to install into ${HELM_UNIT}"
-  echo "GOING TO DO A COPY FOR ${HELM_TMP} to ${HELM_UNIT}"
+  echo "Preparing to install into ${HELM_PLUGIN_PATH}"
   # Use * to also copy the file withe the exe suffix on Windows
-  cp -rf "$HELM_TMP" "$HELM_UNIT"
-  echo "After Print out contents of ${HELM_UNIT}"
-  echo $(ls  /home/jenkins/.helm/plugins/helm-unittest)
-  echo "Print out contents of ${HELM_TMP}"
-  echo $(ls  $HELM_TMP)
-  echo "DONE WIHT THE COPY"
+  cp "$HELM_TMP_BIN"* "$HELM_PLUGIN_PATH"
 }
 
 # fail_trap is executed if an error occurs.
