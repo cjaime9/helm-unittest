@@ -68,7 +68,7 @@ getDownloadURL() {
   # Use the GitHub API to find the latest version for this project.
   local latest_url="https://api.github.com/repos/$PROJECT_GH/releases/latest"
   local version=$(git describe --tags --exact-match 2>/dev/null)
-  DOWNLOAD_URL="https://github.com/cjaime9/helm-unittest/archive/v0.1.2.tar.gz"
+  DOWNLOAD_URL="https://github.com/cjaime9/helm-unittest/blob/master/releases/helm-unittest-linux-0.1.2.tgz"
 #  if [ -n "$version" ]; then
 #    url="https://api.github.com/repos/$PROJECT_GH/releases/tags/$version"
 #  fi
