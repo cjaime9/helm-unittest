@@ -7,4 +7,5 @@ echo "List of all arg: $@"
 echo "hell world 3"
 cd /home/jenkins/.helm/plugins/helm-unittest
 pwd
+ls -la
 ./untt $@
