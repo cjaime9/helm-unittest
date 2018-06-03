@@ -64,6 +64,7 @@ verifySupported() {
 }
 
 # getDownloadURL checks the latest available version.
+# getDownloadURL checks the latest available version.
 getDownloadURL() {
   # Use the GitHub API to find the latest version for this project.
   local latest_url="https://api.github.com/repos/$PROJECT_GH/releases/latest"
@@ -78,6 +79,7 @@ getDownloadURL() {
 #    DOWNLOAD_URL=$(wget -q -O - $latest_url | awk '/\"browser_download_url\":/{gsub( /[,\"]/,"", $2); print $2}')
 #  fi
 }
+
 
 # downloadFile downloads the latest binary package and also the checksum
 # for that binary.
@@ -125,7 +127,7 @@ testVersion() {
 }
 
 # Execution
-echo "running cjaime branch file"
+
 #Stop execution on any error
 trap "fail_trap" EXIT
 set -e
