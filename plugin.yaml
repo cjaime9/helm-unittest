@@ -3,6 +3,6 @@ version: "0.1.2"
 usage: "unittest for helm charts"
 description: "Unit test for helm chart in YAML with ease to keep your chart functional and robust."
 ignoreFlags: false
-command: "/home/jenkins/.helm/cache/plugins/https-github.com-cjaime9-helm-unittest/untt"
+command: "$HELM_PLUGIN_DIR/untt.sh"
 hooks:
   install: "$HELM_PLUGIN_DIR/install-binary.sh"
